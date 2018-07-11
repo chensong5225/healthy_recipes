@@ -1,5 +1,44 @@
 {% extends "layout.html" %}
 
+{% block head %}
+<link href="static/jumbotron.css" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-  <p>Hello world!</p>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron" style="background-image: url('static/image2.jpg')">
+    <div class="container">
+      <h1 class="display-3" style="color: #ffffee">Welcome to Healthy Recipes</h1>
+      <p></p>
+      <h6 style="color: #ffffee">Want to cook somthing healthy and tasty? We can help you by analyzing recipes using Machine Learning algorithms.</h6>
+      <p></p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Danger: overweight in the US</h2>
+        <p>Danger: overweight in the US</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Eat nutriention-dense food</h2>
+        <p>Eat nutriention-dense food</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Cooking from fresh ingredients at home</h2>
+        <p>Cooking from fresh ingredients at home</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
 {% endblock %}

@@ -1,10 +1,49 @@
-<!DOCTYPE html!>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <link rel="stylesheet", href="static/style.css">
-  </head>
-  <body>
-    {% block content %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Chen Song">
+
+    <title>Healthy Recipes</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/starter-template.css" rel="stylesheet">
+    {% block head %}
     {% endblock %}
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="padding: 0.4rem 1rem; background-color: #DDDDDD">
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="navbar-brand" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="#">Github</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Enter ingredients" aria-label="">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      {% block content %}
+      {% endblock %}
+    </main><!-- /.container -->
+
   </body>
 </html>
