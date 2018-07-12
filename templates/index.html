@@ -2,38 +2,82 @@
 
 {% block head %}
 <link href="static/jumbotron.css" rel="stylesheet">
+<style>
+
+  div.jumbotron {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 21rem;
+  }
+
+  div.left {
+    margin-right: 0.65rem;
+    max-width: 32%;
+    height: 15rem;
+    background-color: rgba(185, 185, 185, 0.7);
+    border-radius: 0.25rem;
+    padding-top: 10px;
+  }
+
+  div.middle {
+    margin-right: 0.65rem;
+    margin-left: 0.65rem;
+    max-width: 32%;
+    background-color: rgba(185, 185, 185, 0.7);
+    border-radius: 0.25rem;
+    padding-top: 10px;
+  }
+
+  div.right {
+    margin-left: 0.65rem;
+    max-width: 32%;
+    background-color: rgba(185, 185, 185, 0.7);
+    border-radius: 0.25rem;
+    padding-top: 10px;
+  }
+
+  .main-search {
+    margin: 0 auto;
+    min-height: 50px;
+  }
+
+</style>
 {% endblock %}
 
 {% block content %}
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron" style="background-image: url('static/image2.jpg')">
+  <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3" style="color: #ffffee">Welcome to Healthy Recipes</h1>
+      <h1 class="display-3" align="center">Find Your Healthy Recipes Here</h1>
       <p></p>
-      <h6 style="color: #ffffee">Want to cook somthing healthy and tasty? We can help you by analyzing recipes using Machine Learning algorithms.</h6>
+      <p align="center" style="font-size:1.25rem">Do not know what to cook? We can help you find recipes healthy and tasty!</p>
       <p></p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <form class="form-inline my-2 my-lg-0 main-search" method="POST">
+        <input class="form-control mr-sm-2 main-search" type="text" name="query" placeholder="Enter Your Ingredients" aria-label="Search" style="width:80%;display:inline-block;">
+        <button class="btn btn-outline-success my-2 my-sm-0 main-search" type="submit" style="width:10%;display:inline-block;">Search</button>
+      </form>
     </div>
   </div>
 
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-      <div class="col-md-4">
-        <h2>Danger: overweight in the US</h2>
-        <p>Danger: overweight in the US</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      <div class="col-md-4 left">
+        <h2>Overweight and Obesity in the US</h2>
+        <p>View this wikipedia page of obesity to know more about overweight and obesity in the US.</p>
+        <p><a class="btn btn-secondary" href="https://en.wikipedia.org/wiki/Obesity_in_the_United_States" target="_blank" role="button">View details &raquo;</a></p>
       </div>
-      <div class="col-md-4">
-        <h2>Eat nutriention-dense food</h2>
-        <p>Eat nutriention-dense food</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      <div class="col-md-4 middle">
+        <h2>Toward Nutrient Dense Food</h2>
+        <p>Read this airticle to know more about Nutrient Dense Food and Nutrient Density Scores.</p>
+        <p><a class="btn btn-secondary" href="https://academic.oup.com/ajcn/article-abstract/82/4/721/4607427?redirectedFrom=fulltext" target="_blank" role="button">View details &raquo;</a></p>
       </div>
-      <div class="col-md-4">
-        <h2>Cooking from fresh ingredients at home</h2>
-        <p>Cooking from fresh ingredients at home</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      <div class="col-md-4 right">
+        <h2>Cooking from Fresh Ingredients at Home</h2>
+        <p>Learn this course from coursera.org to know more about how to cook healthy and tasty food at home. </p>
+        <p><a class="btn btn-secondary" href="https://www.coursera.org/learn/childnutrition" target="_blank" role="button">View details &raquo;</a></p>
       </div>
     </div>
 

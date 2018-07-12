@@ -17,6 +17,7 @@ bokeh = "*"
 flask = "*"
 Jinja2 = "*"
 matplotlib = "*"
+whoosh = "*"
 
 [dev-packages]
 

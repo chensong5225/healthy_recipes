@@ -9,32 +9,34 @@
     <title>Healthy Recipes</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="static/bootstrap.css" rel="stylesheet">
+    <link href="static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="static/starter-template.css" rel="stylesheet">
+
     {% block head %}
     {% endblock %}
+
   </head>
 
-  <body>
+  <body style="background-image: url('static/image1.jpg'); background-repeat: no-repeat; background-size: cover">
 
-    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="padding: 0.4rem 1rem; background-color: #DDDDDD">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" style="padding: 0.4rem 1rem">
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="navbar-brand" href="#">Home</a>
+            <a class="navbar-brand" href="{{url_for('index')}}">Home</a>
           </li>
           <li class="nav-item">
             <a class="navbar-brand" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="#">Github</a>
+            <a class="navbar-brand" href="https://github.com/chensong5225/healthy_recipes"  target="_blank">Github</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Enter ingredients" aria-label="">
+        <form class="form-inline my-2 my-lg-0" method="POST">
+          <input class="form-control mr-sm-2" type="text" name="query" placeholder="Enter Your Ingredients" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
@@ -45,5 +47,22 @@
       {% endblock %}
     </main><!-- /.container -->
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="static/bootstrap/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="static/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--
+    <script>
+      $("#query-submit").click(function(){
+        var q = $("#query-text").val();
+        if(q=="") {alert("sth")}else{
+          alert(q);
+        }
+      });
+    </script>
+-->
   </body>
 </html>
