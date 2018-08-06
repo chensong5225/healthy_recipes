@@ -1,5 +1,6 @@
 # Search Engine for Healthy Recipes
 #### Chen Song, chensong5225@gmail.com
+#### [Heroku App](https://hr-chensong5225.herokuapp.com/)
 ## 1. Introduction
 ## 2. Outline of the Project
 ## 3. Data Collection
